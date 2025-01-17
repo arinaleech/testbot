@@ -1,7 +1,7 @@
 
 import asyncio
 from pyrogram import types, errors, enums
-from plugins.config import Config
+from config import Config
 from database.database import tech_vj
 
 async def OpenSettings(m: "types.Message"):
