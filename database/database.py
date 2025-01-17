@@ -42,3 +42,6 @@ class Database:
         user = await self.col.find_one({'id': int(id)})
         return user.get('thumbnail', None)
 
+
+tech_vj = Database(DATABASE_URI, DATABASE_NAME)
+
