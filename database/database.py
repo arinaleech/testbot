@@ -41,3 +41,4 @@ class Database:
     async def get_thumbnail(self, id):
         user = await self.col.find_one({'id': int(id)})
         return user.get('thumbnail', None)
+db = Database(Config.DATABASE_URL, "UploadLinkToFileBot")
