@@ -2,7 +2,7 @@
 import asyncio
 from pyrogram import types, errors, enums
 from config import Config
-from database.database import tech_vj
+from database.access import techvj
 
 async def OpenSettings(m: "types.Message"):
     usr_id = m.chat.id
