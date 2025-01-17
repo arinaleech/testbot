@@ -52,7 +52,9 @@ class Translation(object):
 
     
     TECH_VJ_START_BUTTONS = InlineKeyboardMarkup(
-        [        
+        [  [
+        InlineKeyboardButton('⚙️ sᴇᴛᴛɪɴɢs', callback_data='OpenSettings')
+        ],      
      [
             InlineKeyboardButton('❓ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('🦊 ᴀʙᴏᴜᴛ', callback_data='about')
