@@ -48,20 +48,19 @@ async def progress_for_pyrogram(
             # elapsed_time if elapsed_time != '' else "0 s",
             estimated_total_time if estimated_total_time != '' else "0 s"
         )
-       try:
-        await message.edit(
-            text=status_message,
-            parse_mode=enums.ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [ 
-                        InlineKeyboardButton('⛔️ Cancel', callback_data='close')
-                    ]
-                ]
-            )
+           estimated_total_time if estimated_total_time != '' else "0 s"
         )
-    except Exception as e:
-        print(f"Error updating progress: {e}")
+              estimated_total_time if estimated_total_time != '' else "0 s"
+        )
+        try:
+            await message.edit(
+                text="{}\n {}".format(
+                    ud_type,
+                    tmp
+                )
+            )
+        except:
+            pass
 
 
 def humanbytes(size):
