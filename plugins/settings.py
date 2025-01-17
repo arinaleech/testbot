@@ -6,7 +6,7 @@ from database.database import tech_vj
 
 async def OpenSettings(m: "types.Message"):
     usr_id = m.chat.id
-    user_data = await db.get_user_data(usr_id)
+    user_data = await tech_vj.get_user_data(usr_id)
     if not user_data:
         await m.edit("Failed to fetch your data from database!")
         return
